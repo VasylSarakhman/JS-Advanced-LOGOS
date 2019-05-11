@@ -1,10 +1,10 @@
 (function() {
     let people = {
-        people: ['Sanya', 'Vasyl', 'Roman', 'Dmytro'], // масив імен
-        init: function() { // функція ініціалізації роботи модуля
-            this.cacheDom(); // спрацьовує функція доступів до елементів
-            this.bindEvents(); // спрацьовує функція задавання подій
-            this.render(); // функція обновлення сторінки
+        people: ['Sanya', 'Vasyl', 'Roman', 'Dmytro'],
+        init: function() {
+            this.cacheDom();
+            this.bindEvents();
+            this.render();
         },
         cacheDom: function() {
             this.el = $('.main');
@@ -13,7 +13,7 @@
             this.ul = this.el.find('.listName');
         },
         bindEvents: function() {
-            this.button.on('click', this.addPersonName.bind(this)); // для того щоб не втратити контексти bind(this)
+            this.button.on('click', this.addPersonName.bind(this));
             this.ul.on('click', 'span.del', this.delPersonName.bind(this));
         },
         render: function() {
@@ -27,12 +27,12 @@
 
 
         },
-        addPersonName: function() { // функція яка вставляє в масив імені нове ім'я.
+        addPersonName: function() {
             this.people.push(this.input.val());
             this.render();
             this.input.val('');
         },
-        delPersonName: function(e) { // функція видалення імені
+        delPersonName: function(e) {
             let remove = $(e.target).closest('li');
             let span = this.ul.find('li').index(remove);
             this.people.splice(span, 1);
@@ -40,6 +40,5 @@
         }
 
     };
-    people.init(); // ініціалізація модуля
-    //people.addPerson('Lololo'); // введення нового ім'я, за допомогою методу.
+    people.init();
 })();
