@@ -24,8 +24,6 @@
             for (let i = 0; i < data.people.length; i++) {
                 this.ul.append('<li>' + data.people[i] + ' <span class="del">X</span></li>');
             }
-
-
         },
         addPersonName: function() {
             this.people.push(this.input.val());
@@ -38,7 +36,6 @@
             this.people.splice(span, 1);
             this.render();
         }
-
     };
     people.init();
 })();
