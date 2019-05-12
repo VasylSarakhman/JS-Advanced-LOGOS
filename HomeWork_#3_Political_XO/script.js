@@ -1,5 +1,5 @@
 let count = 0;
-const newShop = (function () {
+const politicXO = (function () {
   getId = x => document.getElementById(x);
   getQS = y => document.querySelector(y);
   let check = true;
@@ -53,7 +53,7 @@ const newShop = (function () {
 
 }());
 
-(function (shop) {
+(function (XO) {
   let player = "X";
   let images = ['url(images/X.png)', 'url(images/O.png)'];
   getQS('.zelen').style.display = "";
@@ -74,4 +74,4 @@ const newShop = (function () {
       newShop.win();
     });
   }
-}(newShop))
+}(politicXO))
