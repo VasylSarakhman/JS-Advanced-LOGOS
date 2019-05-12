@@ -42,11 +42,8 @@ const newShop = (function () {
       }
       if (count == 9 && check == true) {
         getQS('.zelen').style.display = 'none';
-        // getQS('.zelen2').style.display = 'none';
         getQS('.poroh').style.display = 'none';
         setTimeout(() => {
-          // alert('Nobody Win')
-          //--------------------------------
           getQS('.game').style.display = 'none'
           getQS('.timo').style.display = 'block'
         }, 300);
