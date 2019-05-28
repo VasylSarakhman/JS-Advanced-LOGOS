@@ -45,6 +45,9 @@ function createTable() {
         tableContainer.removeChild(tab[0]);
     }
 }
+if (localStorage.length > 0){
+    createTable();
+}
 form.addBtn.addEventListener('click', function () {
     let user = new User(form.login.value, form.pass.value, form.email.value);
     form.reset()
