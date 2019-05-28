@@ -3,13 +3,13 @@ let User = (function () {
     let age = 25;
     return {
         getName: function () {
-            alert(name)
+            alert(name);
         },
         setName: function (newName) {
-            name = newName
+            name = newName;
         },
         getAge: function () {
-            alert(age)
+            alert(age);
         }
     }
 }());
